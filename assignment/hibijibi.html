@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      background-color: #f5f5f5;
+    }
+
+    header {
+      background-color: #3498db;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    nav {
+      background-color: #333;
+      color: white;
+      padding: 10px;
+      text-align: center;
+    }
+
+    .card-container {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      max-width: 900px; /* Optional: Set a maximum width for the card container */
+      margin: 20px auto;
+    }
+
+    .card {
+      width: 48%; /* Adjust the width as needed */
+      background-color: #fff;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      overflow: hidden;
+      margin-bottom: 20px;
+    }
+
+    .card img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+    }
+
+    .card-content {
+      padding: 20px;
+    }
+
+    .card h2 {
+      margin: 0;
+      color: #333;
+    }
+
+    .card p {
+      margin-top: 8px;
+      color: #666;
+    }
+
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      margin-top: auto;
+      width: 100%;
+    }
+
+    input {
+      margin: 20px 0;
+      padding: 10px;
+      width: 100%;
+    }
+
+    .message-card {
+      width: 100%;
+      background-color: #fff;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      overflow: hidden;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Responsive Web Page</h1>
+    <p>This is a simple example of a responsive web page.</p>
+  </header>
+
+  <nav>
+    <p>Navbar Content Goes Here</p>
+  </nav>
+
+  <div class="card-container">
+    <div class="card">
+      <img src="https://via.placeholder.com/300" alt="Card Image">
+      <div class="card-content">
+        <h2>Title 1</h2>
+        <p>This is the content of card 1.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://via.placeholder.com/300" alt="Card Image">
+      <div class="card-content">
+        <h2>Title 2</h2>
+        <p>This is the content of card 2.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://via.placeholder.com/300" alt="Card Image">
+      <div class="card-content">
+        <h2>Title 3</h2>
+        <p>This is the content of card 3.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://via.placeholder.com/300" alt="Card Image">
+      <div class="card-content">
+        <h2>Title 4</h2>
+        <p>This is the content of card 4.</p>
+      </div>
+    </div>
+  </div>
+
+  <input type="number" id="ageInput" placeholder="Enter your age">
+
+  <div id="ageMessage" class="message-card"></div>
+
+  <footer>
+    &copy; 2024 Your Website Name. All Rights Reserved.
+  </footer>
+
+  <script>
+    function checkAge() {
+      var ageInput = document.getElementById('ageInput').value;
+      var messageCard = document.getElementById('ageMessage');
+
+      if (ageInput >= 18) {
+        messageCard.innerHTML = '<div class="card-content"><h2>You are an adult</h2></div>';
+      } else {
+        messageCard.innerHTML = '<div class="card-content"><h2>You are a child</h2></div>';
+      }
+    }
+
+    // Execute checkAge when the input value changes
+    document.getElementById('ageInput').addEventListener('input', checkAge);
+  </script>
+
+</body>
+</html>
